@@ -79,7 +79,7 @@ class List extends Component {
                   onClick={() => {
                     this.handleClick(item._id);
                   }}
-                  className="btn btn-success btn-lg button"
+                  className="btn btn-info btn-sm"
                 >
                   View
                 </button>
@@ -87,7 +87,7 @@ class List extends Component {
                   onClick={() => {
                     this.handleDelete(item._id);
                   }}
-                  className="btn btn-success btn-lg button"
+                  className="btn btn-danger btn-sm"
                 >
                   Delete
                 </button>
