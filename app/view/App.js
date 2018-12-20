@@ -13,7 +13,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="container">
         <List />
       </div>
     );
@@ -68,7 +68,7 @@ class List extends Component {
     return (
       <div>
         <input placeholder="URL" ref={this.url} id="ph" />
-        <button onClick={this.handleAdd} className="button">Add</button>
+        <button onClick={this.handleAdd} className="btn btn-success btn-lg button">Add</button>
         <h3>List</h3>
         <ul>
           {this.data &&
@@ -79,7 +79,7 @@ class List extends Component {
                   onClick={() => {
                     this.handleClick(item._id);
                   }}
-                  className="button"
+                  className="btn btn-success btn-lg button"
                 >
                   View
                 </button>
@@ -87,7 +87,7 @@ class List extends Component {
                   onClick={() => {
                     this.handleDelete(item._id);
                   }}
-                  className="button"
+                  className="btn btn-success btn-lg button"
                 >
                   Delete
                 </button>
