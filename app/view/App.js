@@ -51,7 +51,7 @@ class List extends Component {
       url: this.url.current.value
     };
     if(newdata.url == "") {
-
+      alert("Can't enter empty entry.");
     }
     else {
       this.url_data.addData(newdata).then(res => {
