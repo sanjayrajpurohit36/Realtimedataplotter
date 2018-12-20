@@ -50,9 +50,14 @@ class List extends Component {
     var newdata = {
       url: this.url.current.value
     };
-    this.url_data.addData(newdata).then(res => {
-      this.getList();
-    });
+    if(newdata.url == "") {
+
+    }
+    else {
+      this.url_data.addData(newdata).then(res => {
+        this.getList();
+      });
+    }
   };
 
   handleClick = id => {
@@ -117,7 +122,7 @@ class Item extends Component {
       .then(res => (this.data = res));
   };
 
-  render() {
+  render() {  
     return (
       <div>
         <h3>
