@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import UrlStore from "./UrlStore";
 import { observer } from "mobx-react";
 import { observable, observe } from "mobx";
+import './App.css';
 var CanvasJSReact = require("./canvasjs.react");
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
@@ -61,8 +62,8 @@ class List extends Component {
   render() {
     return (
       <div>
-        <input placeholder="URL" ref={this.url} />
-        <button onClick={this.handleAdd}>Add</button>
+        <input placeholder="URL" ref={this.url} id="ph" />
+        <button onClick={this.handleAdd} className="button">Add</button>
         <h3>List</h3>
         <ul>
           {this.data &&
@@ -73,6 +74,7 @@ class List extends Component {
                   onClick={() => {
                     this.handleClick(item._id);
                   }}
+                  className="button"
                 >
                   View
                 </button>
@@ -80,6 +82,7 @@ class List extends Component {
                   onClick={() => {
                     this.handleDelete(item._id);
                   }}
+                  className="button"
                 >
                   Delete
                 </button>
